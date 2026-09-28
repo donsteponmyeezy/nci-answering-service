@@ -21,7 +21,7 @@
   .h-section { @apply font-display font-bold leading-[1.1] text-[1.85rem] sm:text-[2.25rem] lg:text-[2.6rem]; }
   .h-card { @apply font-display font-bold leading-tight text-[1.25rem] lg:text-[1.4rem]; }
   .lede { @apply text-[1.0625rem] leading-relaxed text-muted-ink lg:text-lg; }
-  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-[15px] font-semibold leading-none transition-colors duration-150 min-h-[48px]; }
+  .btn { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-5 py-3 text-[15px] font-semibold leading-none transition-colors duration-150 min-h-[48px]; }
   .btn-brand { @apply btn bg-brand text-on-brand hover:bg-brand-hover; }
   .btn-alert { @apply btn bg-alert text-white hover:bg-alert-hover; }
   .btn-outline { @apply btn border border-brand text-brand hover:bg-brand-subtle; }
@@ -40,7 +40,7 @@
   .price-card__cents { position: static; top: auto; line-height: 1; font-size: 1.2rem; margin: 0.4rem 0 0 0.15rem; vertical-align: baseline; }
   .choice { @apply flex cursor-pointer items-start gap-3 rounded-lg border border-border bg-canvas p-4 text-left transition hover:border-brand/60 hover:bg-brand-subtle; }
   .choice[aria-checked="true"], .choice:has(input:checked) { @apply border-brand bg-brand-subtle ring-2 ring-brand/30; }
-  .nav-link { @apply rounded-md px-3 py-2 text-[15px] font-semibold text-slate hover:text-brand; }
+  .nav-link { @apply whitespace-nowrap rounded-md px-2.5 py-2 text-[14px] font-semibold text-slate hover:text-brand xl:px-3 xl:text-[15px]; }
   .nav-link[aria-current="page"] { @apply text-brand; }
   .stat { @apply font-slab text-[2.5rem] font-medium leading-none text-brand; }
 }

@@ -26,7 +26,7 @@ const CSP_REPORT_ONLY = [
   "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com",
   "frame-src 'self' https://www.googletagmanager.com https://challenges.cloudflare.com",
   "manifest-src 'self'",
-  "upgrade-insecure-requests",
+  // add "upgrade-insecure-requests" when promoting to an enforcing policy; browsers ignore it in report-only mode
 ].join("; ");
 
 const SECURITY_HEADERS = [

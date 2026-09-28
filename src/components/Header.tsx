@@ -32,9 +32,9 @@ export function Header() {
       </a>
 
       <div className="bg-brand text-on-brand">
-        <div className="wrap flex h-10 items-center justify-between gap-4 text-[13px] font-semibold tracking-wide">
-          <p className="hidden sm:block">Answering calls for medical practices and professionals for {SITE.yearsInService} years</p>
-          <div className="ml-auto flex items-center gap-1">
+        <div className="wrap flex min-h-10 items-center justify-between gap-4 py-1 text-[13px] font-semibold tracking-wide">
+          <p className="hidden truncate lg:block">Answering calls for medical practices and professionals for {SITE.yearsInService} years</p>
+          <div className="ml-auto flex shrink-0 items-center gap-1 whitespace-nowrap">
             <a href={SITE.phone.href} data-cta="phone" className="rounded px-2.5 py-1.5 hover:bg-white/10">{SITE.phone.display}</a>
             <a href={`mailto:${SITE.email}`} className="hidden rounded px-2.5 py-1.5 hover:bg-white/10 md:inline-block">Email Us</a>
             <a href={SITE.paymentPortalUrl} rel="noopener" target="_blank" className="rounded bg-alert px-3 py-1.5 uppercase hover:bg-alert-hover">Make a Payment</a>
@@ -43,7 +43,7 @@ export function Header() {
       </div>
 
       <header id="site-header" className="sticky top-0 z-50 border-b border-border bg-canvas/95 backdrop-blur">
-        <div className="wrap flex h-[76px] items-center justify-between gap-6">
+        <div className="wrap flex h-[76px] items-center justify-between gap-4 xl:gap-6">
           <Link href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name} home`}>
             <Image src="/images/nci-answering-service-logo.webp" alt={SITE.name} width={147} height={67} priority className="h-[52px] w-auto md:h-[60px]" />
           </Link>
@@ -55,7 +55,7 @@ export function Header() {
             ))}
           </nav>
           <div className="hidden items-center gap-2 lg:flex">
-            <a href={SITE.phone.href} data-cta="phone" className="btn-ghost"><PhoneIcon />{SITE.phone.display}</a>
+            <a href={SITE.phone.href} data-cta="phone" className="btn-ghost hidden xl:inline-flex"><PhoneIcon />{SITE.phone.display}</a>
             <Link href="/find-your-coverage" className="btn-brand">Find Your Coverage</Link>
           </div>
           <button
