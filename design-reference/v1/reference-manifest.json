@@ -1,0 +1,159 @@
+{
+  "client": "NCI Answering Service",
+  "version": "v1",
+  "status": "verified-reference",
+  "frozenAt": "2026-09-28",
+  "brief": "Rework nciansweringservice.com keeping its design language (green #038855, Play/Roboto, white utility+nav, photo heroes on a white fade, slate pricing cards) while adding the proposal's new sections: Human Difference, daytime support with cost comparison, business & professional services, temporary coverage, Find Your Coverage tool, SEO foundation.",
+  "routes": [
+    {
+      "file": "index.html",
+      "route": "/",
+      "archetype": "home",
+      "states": [
+        "desktop hero wash",
+        "mobile stacked hero",
+        "sticky call bar after 120px",
+        "mobile menu open"
+      ]
+    },
+    {
+      "file": "services.html",
+      "route": "/services",
+      "archetype": "long-form service page with jump nav",
+      "states": [
+        "rollover calculator input change",
+        "in-page anchors"
+      ]
+    },
+    {
+      "file": "pricing.html",
+      "route": "/pricing",
+      "archetype": "pricing",
+      "states": [
+        "featured card",
+        "FAQ disclosure open/closed"
+      ]
+    },
+    {
+      "file": "find-your-coverage.html",
+      "route": "/find-your-coverage",
+      "archetype": "interactive tool",
+      "states": [
+        "question 1..6",
+        "validation error",
+        "recommendation",
+        "callback form",
+        "callback preview-done"
+      ]
+    },
+    {
+      "file": "contact.html",
+      "route": "/contact",
+      "archetype": "contact",
+      "states": [
+        "?plan= prefill",
+        "?interest= prefill",
+        "validation error",
+        "preview-done"
+      ]
+    },
+    {
+      "file": "who-we-serve.html",
+      "route": "/who-we-serve",
+      "archetype": "content page (services archetype)",
+      "states": []
+    },
+    {
+      "file": "about.html",
+      "route": "/about",
+      "archetype": "content page (services archetype)",
+      "states": []
+    },
+    {
+      "file": "privacy-policy.html",
+      "route": "/privacy-policy",
+      "archetype": "text page",
+      "states": []
+    }
+  ],
+  "tokens": {
+    "brand": "#038855",
+    "brandHover": "#00784A",
+    "alert": "#DF0000",
+    "slate": "#353535",
+    "surface": "#F7F7F7",
+    "ink": "#1E2622",
+    "mutedInk": "#5C6660",
+    "border": "#E1E7E4",
+    "fonts": {
+      "display": "Play 400/700",
+      "body": "Roboto variable",
+      "slab": "Roboto Slab variable"
+    },
+    "container": "1200px, gutters 20/32/40px",
+    "breakpoints": "Tailwind 3.4 defaults (sm 640, md 768, lg 1024, xl 1280)"
+  },
+  "captures": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "build": {
+    "tailwind": "3.4.17",
+    "node": "v26.7.0",
+    "commands": [
+      "npm install",
+      "npm run build",
+      "npm run serve"
+    ]
+  },
+  "files": {
+    ".gitignore": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97",
+    "README.md": "7441f9b7f577bf39966290edf9ccd64e5d9a109876e27ee36700a792ff82dd2c",
+    "about.html": "761aa0dc986cdf20a8f94727459c3eaa7f81195f6a39a415553acb6208f1f941",
+    "assets/fonts/play-400.woff2": "d0964aee1973c5818130723f3bf5b8e0b51bf775a5074949c91d815d91f2924f",
+    "assets/fonts/play-700.woff2": "42d25e75823f99564c199e3dc486ff8562ce77625ea50ee07385df687296f69f",
+    "assets/fonts/roboto-slab-var.woff2": "a8e429611131e3fdc2018ec943a36100dbabb4aaa788c8dead6bdcf927917293",
+    "assets/fonts/roboto-var.woff2": "20b535fa80c8189e3b87d1803038389960203a886d502bc2ef1857affc2f38d2",
+    "assets/img/nci-answering-service-hero-2000-2.webp": "004f91e7100b671f2562785f001140215775121df5a11ac208aeddc9be993efd",
+    "assets/img/nci-answering-service-logo.webp": "456cc3df20c92fa0259f8953b82e639ad70f72699a325208709b32290e24f176",
+    "assets/img/nci-banne-who.webp": "f0675a0f6c4f783d6ab189b66903c931de34b1bca170fd32b11b33bdada0dba2",
+    "assets/img/nci-banner-black-man.webp": "f9185234e04cce0b96e09b1617ebdcd56dc6ce5473b5158e77dd86c993ef8dd8",
+    "assets/img/nci-banner-man.webp": "91a8cf3b0d30562bf6033338bd1c835ef9be2eeb305a53d700b6c93510d84173",
+    "assets/img/nci-banner-photo-2.webp": "b0c15720a9bec2c2a8eba772dd67e69927c0fe8be619bee3f6049f81181cca1a",
+    "assets/img/nci-contact-us-banner-1.webp": "4f45a17370ea405b304d62d3fd66d30041c1a6dddc2a7422a57bf23dd7e671e2",
+    "assets/img/nci-favicon.jpg": "2e36c138b7a7458848a8ef53fdb889042cd47b5802f69b2da3525b90b462810e",
+    "assets/img/nci-mobile-hero-800-768x457.webp": "995860331dbf6b1a1d1318e796b7fecf63ad4dd09da042082ea5c522cbac5f60",
+    "assets/img/nci-mobile-hero-800.webp": "0459eb8ebeecedd688a492665594e2e3e95c4154530883572c9dd9eb321010ae",
+    "assets/img/nci-photo-banner-3.webp": "1142e659a399925207662abad32baa2889829e8d664e76c2fe1bdac4e92469fa",
+    "build.mjs": "a6002f7e1ba2fa96bbfc9e9c3bfcbca69270fc2ad5db89c30e8d8c542639e3ae",
+    "contact.html": "6d6d2c474d134186088a557f7e1edbba1788953f310587ac8da6c46bd1329395",
+    "find-your-coverage.html": "280811e44223dc751006391e13b4ddb40e73572a8c912e1ed7cc4e596aa6b580",
+    "index.html": "710c8a98c4bcd26e1d262fee86e0c971486e2bf8b328ef98c12a5d604433c872",
+    "package.json": "c98d7418ce976cba8cf09f43f25edb90f1dda1a08da56c15275d3451b8edb28f",
+    "pages/about.html": "e26e009cf8f6c8a01ebe61251307eaeaf0d1700ada0d22e9f3f9e14379048062",
+    "pages/contact.html": "b3dde92d7d57498cd2654b73b3a475f052389d24fee0acc00e75cd3d90433e70",
+    "pages/find-your-coverage.html": "74212f451f3a5845d75ce010b2dd43825259402be1cde4940288c8dc80bc2d62",
+    "pages/index.html": "40b11d366f7ffe4cdee3ea4a4048942259313926c7965cd3b08e82f5289c119b",
+    "pages/pricing.html": "bf5d150b305ba6f4dafe37e72e70e3054b751a6c6b1c83bb8c1229df2e894731",
+    "pages/privacy-policy.html": "8b8f80917e4b99e3bbf8ffdf8eb2c9aa048b6f7b9da572827ae24d3fb06f4163",
+    "pages/services.html": "669d33aab354dd5a5225d77371fd03daebe00c156743bff6f69b2a456c5c27ac",
+    "pages/who-we-serve.html": "44e887ad7c174454679c200756c884a14ed04212252cf8de291a35c3e3cd8ed6",
+    "partials/footer.html": "54b0de9db8440094b969a600e8fe692ac3b60b6b243724b99552f662aa67593c",
+    "partials/header.html": "4c7927ef349b5ff1a772e9241e2a8a2e58075bdd47a39e63153c4dbc0b868e14",
+    "pricing.html": "f2a855e95c33dcde9e5a88572def6d1dc97c675fd399d4b0d152eae7d84b6f8a",
+    "privacy-policy.html": "49ce5298ac27c21f97cd397a873b85d9a85b937e5f0a640c2425934808e0a7f1",
+    "scripts/site.js": "dbe02d43f096311f9f982c7c19b70ab0d711ed2065a2a879394898afd4a2d360",
+    "services.html": "30fede3eee37f2c35a8ddcb58a86c1de33ce14ed3dec7da157a8b9dfbe28d38c",
+    "styles/fonts.css": "eebc6a8f94ff63ef1747dab37a4cb8353524f143ca89159e65914cb5cf88af27",
+    "styles/site.css": "670abba0f775e602c501e55f8dfd3dc7c57f02018dfb21064da8b1dfd371ab54",
+    "styles/tailwind.css": "450fb139c304e8c525a358a21eb2e475acef1e6fe2c3d5e9b48ed0d5195ea3b9",
+    "tailwind.config.js": "375e84b7407d38acb3499d06d21d3f2e4bf8c8a850546fae00f0edac1b94938e",
+    "who-we-serve.html": "edf2567a1300e2e080372ea1031796ca94a4ffd770888e9c8589f852236a4bab"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_comment": "Legacy WordPress → new route map. Crawled from nciansweringservice.com sitemaps on 2026-09-28. WooCommerce/cart/shop/account pages were empty scaffolds on the old site and collapse to the payment page or home.",
+  "redirects": [
+    { "source": "/home", "destination": "/" },
+    { "source": "/home/", "destination": "/" },
+    { "source": "/about/", "destination": "/about" },
+    { "source": "/services/", "destination": "/services" },
+    { "source": "/who-we-serve/", "destination": "/who-we-serve" },
+    { "source": "/pricing/", "destination": "/pricing" },
+    { "source": "/contact-us", "destination": "/contact" },
+    { "source": "/contact-us/", "destination": "/contact" },
+    { "source": "/thank-you/", "destination": "/thank-you" },
+    { "source": "/privacy-policy/", "destination": "/privacy-policy" },
+    { "source": "/privacy-policy-2", "destination": "/privacy-policy" },
+    { "source": "/privacy-policy-2/", "destination": "/privacy-policy" },
+    { "source": "/ach-payment-portal", "destination": "/make-a-payment" },
+    { "source": "/ach-payment-portal/", "destination": "/make-a-payment" },
+    { "source": "/refund_returns", "destination": "/pricing" },
+    { "source": "/refund_returns/", "destination": "/pricing" },
+    { "source": "/shop", "destination": "/make-a-payment" },
+    { "source": "/shop/", "destination": "/make-a-payment" },
+    { "source": "/cart", "destination": "/make-a-payment" },
+    { "source": "/cart/", "destination": "/make-a-payment" },
+    { "source": "/checkout", "destination": "/make-a-payment" },
+    { "source": "/checkout/", "destination": "/make-a-payment" },
+    { "source": "/my-account", "destination": "/make-a-payment" },
+    { "source": "/my-account/", "destination": "/make-a-payment" },
+    { "source": "/hello-world", "destination": "/" },
+    { "source": "/hello-world/", "destination": "/" },
+    { "source": "/elementor-landing-page-18", "destination": "/" },
+    { "source": "/elementor-landing-page-18/", "destination": "/" }
+  ]
+}
