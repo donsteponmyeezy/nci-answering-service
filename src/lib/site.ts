@@ -6,12 +6,12 @@
  * 2026-09-28). Anything NCI changes (rates, phone, address) changes here once.
  */
 export const SITE = {
-  name: "NCI Answering Service",
-  legalName: "NCI Answering Service",
+  name: "Next Call In (NCI)",
+  legalName: "Next Call In",
   domain: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://nciansweringservice.com",
-  tagline: "Safeguarding your reputation with 25 years of compassionate medical answering",
+  tagline: "Connecting Your Customers with Care",
   description:
-    "NCI Answering Service is a HIPAA-compliant answering service for hospitals, medical practices, and professional businesses. 25+ years, no contracts, answered by people 24/7.",
+    "Next Call In (NCI) is a HIPAA-compliant answering service for hospitals, medical practices, and professional businesses. 25+ years, no contracts, answered by people 24/7.",
   phone: { display: "914-333-9348", href: "tel:+19143339348", e164: "+19143339348" },
   email: "info@nciansweringservice.net",
   address: { street: "1401 Route 52", city: "Fishkill", state: "NY", stateLong: "New York", zip: "12524", country: "US" },
@@ -100,4 +100,15 @@ export const PRICING_FAQ = [
   { q: "When is per-minute pricing used?", a: "Only for daytime rollover during your advertised business hours, at $1.35 per minute, because call volumes are higher. After-hours packages are billed per call." },
   { q: "Is there a contract?", a: "No. We don't lock clients into contracts because our services speak for themselves. The only one-time charge is the $50 account setup." },
   { q: "How do I pay my invoice?", a: "Use the Make a Payment button at the top of any page. Credit card and ACH options are available through our payment portal." },
+] as const;
+
+/** Monica's September 18 brief, supplied by Joe on October 7, 2026. */
+export const INDUSTRIES = ["Healthcare", "Medical Practices", "Professional Offices", "Contractors & Home Services", "Legal", "Property Management", "Small & Growing Businesses"] as const;
+export const COMPANY_HISTORY = ["Emergency Response Answering Service", "NCI", "Next Call In"] as const;
+export const CORE_VALUES = [
+  { name: "Professionalism", description: "Representing your business with courtesy and care on every call.", icon: "briefcase" },
+  { name: "Compassion", description: "Listening carefully so every caller feels heard.", icon: "heart" },
+  { name: "Reliability", description: "Dependable coverage when your callers need you.", icon: "clock" },
+  { name: "Accuracy", description: "Careful message taking and dispatching through the right channels.", icon: "check" },
+  { name: "Personalized Service", description: "Call handling shaped around your team and your instructions.", icon: "person" },
 ] as const;

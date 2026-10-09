@@ -27,8 +27,8 @@ export function organizationNode(): SchemaNode {
     description: SITE.description,
     url: SITE.domain,
     telephone: SITE.phone.e164,
-    logo: `${SITE.domain}/images/nci-answering-service-logo.webp`,
-    image: `${SITE.domain}/images/nci-answering-service-hero-2000-2.webp`,
+    logo: `${SITE.domain}/images/source/NCI-Logo.png`,
+    image: `${SITE.domain}/images/source/NCI-Hero.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -86,7 +86,7 @@ export function offerCatalogNode(): SchemaNode {
   return {
     "@type": "OfferCatalog",
     "@id": `${abs("/pricing")}#offers`,
-    name: "NCI Answering Service pricing packages",
+    name: "Next Call In (NCI) pricing packages",
     itemListElement: [
       ...PRICING.perCall.map((p) => ({
         "@type": "Offer",

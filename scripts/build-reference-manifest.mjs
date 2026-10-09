@@ -7,7 +7,9 @@ import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = join(dirname(fileURLToPath(import.meta.url)), "..", "design-reference", "v1");
+const version = process.argv.find(arg => arg.startsWith("--version="))?.split("=")[1] || "v1";
+if (!["v1", "v2"].includes(version)) throw new Error("Unsupported reference version");
+const root = join(dirname(fileURLToPath(import.meta.url)), "..", "design-reference", version);
 const check = process.argv.includes("--check");
 
 const ROUTES = [
@@ -48,14 +50,14 @@ if (check) {
   console.log(`reference ok — ${Object.keys(files).length} files match ${prev.version} (${prev.frozenAt})`);
 } else {
   const manifest = {
-    client: "NCI Answering Service",
-    version: "v1",
+    client: version === "v2" ? "Next Call In (NCI)" : "NCI Answering Service",
+    version,
     status: "verified-reference",
-    frozenAt: new Date().toISOString().slice(0, 10),
-    brief: "Rework nciansweringservice.com keeping its design language (green #038855, Play/Roboto, white utility+nav, photo heroes on a white fade, slate pricing cards) while adding the proposal's new sections: Human Difference, daytime support with cost comparison, business & professional services, temporary coverage, Find Your Coverage tool, SEO foundation.",
+    frozenAt: process.argv.find(arg => arg.startsWith("--date="))?.split("=")[1] || new Date().toISOString().slice(0, 10),
+    brief: version === "v2" ? "Joe’s October 7 brief: supplied Next Call In (NCI) logo and hero, refreshed brand colors, company history, woman-owned callout, core values, seven industries, Hudson Valley context and direct consultation CTA. Actual team photos remain pending." : "Rework nciansweringservice.com keeping its design language (green #038855, Play/Roboto, white utility+nav, photo heroes on a white fade, slate pricing cards) while adding the proposal's new sections: Human Difference, daytime support with cost comparison, business & professional services, temporary coverage, Find Your Coverage tool, SEO foundation.",
     routes: ROUTES,
-    tokens: { brand: "#038855", brandHover: "#00784A", alert: "#DF0000", slate: "#353535", surface: "#F7F7F7", ink: "#1E2622", mutedInk: "#5C6660", border: "#E1E7E4", fonts: { display: "Play 400/700", body: "Roboto variable", slab: "Roboto Slab variable" }, container: "1200px, gutters 20/32/40px", breakpoints: "Tailwind 3.4 defaults (sm 640, md 768, lg 1024, xl 1280)" },
-    captures: [{ width: 1440, height: 900 }, { width: 390, height: 844 }],
+    tokens: { brand: version === "v2" ? "#397F8B" : "#038855", brandHover: version === "v2" ? "#306D78" : "#00784A", alert: "#DF0000", slate: version === "v2" ? "#254763" : "#353535", surface: "#F7F7F7", ink: "#1E2622", mutedInk: "#5C6660", border: "#E1E7E4", fonts: { display: "Play 400/700", body: "Roboto variable", slab: "Roboto Slab variable" }, container: "1200px, gutters 20/32/40px", breakpoints: "Tailwind 3.4 defaults (sm 640, md 768, lg 1024, xl 1280)" },
+    captures: [{ width: 1440, height: 900 }, { width: 390, height: version === "v2" ? 900 : 844 }],
     build: { tailwind: "3.4.17", node: process.version, commands: ["npm install", "npm run build", "npm run serve"] },
     files,
   };

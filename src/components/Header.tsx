@@ -45,7 +45,7 @@ export function Header() {
       <header id="site-header" className="sticky top-0 z-50 border-b border-border bg-canvas/95 backdrop-blur">
         <div className="wrap flex h-[76px] items-center justify-between gap-4 xl:gap-6">
           <Link href="/" className="flex shrink-0 items-center" aria-label={`${SITE.name} home`}>
-            <Image src="/images/nci-answering-service-logo.webp" alt={SITE.name} width={147} height={67} priority className="h-[52px] w-auto md:h-[60px]" />
+            <span className="nci-logo"><Image src="/images/source/NCI-Logo.png" alt={SITE.name} width={1536} height={1024} priority unoptimized /></span>
           </Link>
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
             {NAV.map((n) => (

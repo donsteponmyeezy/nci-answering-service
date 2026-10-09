@@ -1,0 +1,15 @@
+{
+  "name": "nci-design-reference",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NCI Answering Service — retained HTML/Tailwind design reference (v1). Not a production bundle.",
+  "scripts": {
+    "css": "tailwindcss -c tailwind.config.js -i styles/tailwind.css -o styles/site.css --minify",
+    "pages": "node build.mjs",
+    "build": "npm run pages && npm run css",
+    "serve": "python3 -m http.server 4173"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

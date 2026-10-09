@@ -2,14 +2,14 @@
   "name": "nci-answering-service",
   "version": "1.0.0",
   "private": true,
-  "description": "NCI Answering Service website — Next.js 14 App Router port of design-reference/v1.",
+  "description": "Next Call In (NCI) website \u2014 Next.js App Router with retained v1 and v2 HTML references.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "check:reference": "node scripts/build-reference-manifest.mjs --check"
+    "check:reference": "node scripts/build-reference-manifest.mjs --check && node scripts/build-reference-manifest.mjs --version=v2 --check"
   },
   "dependencies": {
     "next": "14.2.30",

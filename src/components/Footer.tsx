@@ -9,12 +9,12 @@ export function CtaBand() {
       <div className="wrap grid items-center gap-8 py-14 lg:grid-cols-[1.4fr_1fr] lg:py-16">
         <div>
           <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-white/80">See why we&rsquo;re the best value in the industry</p>
-          <h2 className="mt-2 font-display text-[1.85rem] font-bold leading-tight text-white sm:text-[2.25rem]">Talk to a person about your coverage today.</h2>
+          <h2 className="mt-2 font-display text-[1.85rem] font-bold leading-tight text-white sm:text-[2.25rem]">Let’s Talk</h2>
           <p className="mt-3 max-w-xl text-white/85">No contracts, no hidden fees, and no bot on the line. Call us or request a callback and a member of our core team will reach out.</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
           <a href={SITE.phone.href} data-cta="phone" className="btn bg-white text-brand hover:bg-brand-tint">Call {SITE.phone.display}</a>
-          <Link href="/contact" className="btn border border-white/60 text-white hover:bg-white/10">Request a Callback</Link>
+          <Link href="/contact#contact-form" className="btn border border-white/60 text-white hover:bg-white/10">Request a Consultation</Link>
         </div>
       </div>
     </section>
@@ -44,7 +44,7 @@ export function Footer() {
     <footer className="bg-canvas">
       <div className="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
-          <Image src="/images/nci-answering-service-logo.webp" alt={SITE.name} width={147} height={67} className="h-[56px] w-auto" />
+          <span className="nci-logo"><Image src="/images/source/NCI-Logo.png" alt={SITE.name} width={1536} height={1024} priority unoptimized /></span>
           <p className="mt-4 max-w-xs text-[15px] leading-relaxed text-muted-ink">A HIPAA-compliant answering service for hospitals, medical practices, and professional businesses. Serving New York, the Tri-State area, and clients nationwide for {SITE.yearsInService} years.</p>
           <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-[13px] font-semibold text-slate">
             <li>HIPAA-compliant</li><li>No contracts</li><li>24/7 support</li><li>Translation services</li>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { INDUSTRIES } from "@/lib/site";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
@@ -27,6 +28,7 @@ export default function WhoWeServePage() {
             <h2 className="h-section">Efficient &amp; compassionate call services for 25+ years</h2>
             <p className="lede mt-5">NCI is a HIPAA-compliant answering service that predominately works on accounts for hospitals and medical practices. But the qualities that set us apart in the medical field, accuracy, efficiency, compassion, and cost, also benefit non-medical businesses. Whether you&rsquo;re a small clinic, a large hospital, or a non-medical business, your call center is a reflection of you. We take that responsibility seriously and protect your reputation with reliability and professionalism.</p>
           </div>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{INDUSTRIES.map(industry => <li key={industry} className="card p-4 font-semibold text-slate">{industry}</li>)}</ul>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {AUDIENCES.map((a) => (
               <article key={a.interest} className="card flex flex-col p-7">
@@ -48,7 +50,7 @@ export default function WhoWeServePage() {
             <p className="lede mt-5">We take pride in our long list of satisfied clients, and we&rsquo;re happy to share references upon request. Ask, and we&rsquo;ll connect you with a practice like yours.</p>
             <Link href="/contact" className="btn-brand mt-7">Contact us for references</Link>
           </div>
-          <figure><Image src="/images/nci-banner-photo-2.webp" alt="Two NCI dispatchers at their stations, one turned toward the camera" width={810} height={391} sizes="(min-width: 1024px) 560px, 100vw" className="aspect-[16/10] w-full rounded-xl2 object-cover object-left shadow-card" /></figure>
+          <figure><Image src="/images/nci-banner-photo-2.webp" alt="Two call center professionals at their stations, one turned toward the camera" width={810} height={391} sizes="(min-width: 1024px) 560px, 100vw" className="aspect-[16/10] w-full rounded-xl2 object-cover object-left shadow-card" /></figure>
         </div>
       </section>
     </>

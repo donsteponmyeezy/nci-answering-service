@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 import { Schema, webPageNode, breadcrumbNode } from "@/components/Schema";
 
 const TITLE = "Privacy Policy";
-const DESC = "How NCI Answering Service handles information submitted through this website.";
+const DESC = "How Next Call In (NCI) handles information submitted through this website.";
 
 export const metadata = createMetadata({ title: TITLE, description: DESC, path: "/privacy-policy" });
 

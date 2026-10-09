@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: { default: `${SITE.name} | HIPAA-Compliant Medical Answering Service`, template: `%s | ${SITE.name}` },
   description: SITE.description,
-  icons: { icon: "/images/nci-favicon.jpg" },
+  icons: { icon: "/images/source/NCI-Logo.png" },
 };
 
-export const viewport: Viewport = { themeColor: "#038855", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#397F8B", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
-import { SITE, SERVICES } from "@/lib/site";
+import { SITE, SERVICES, INDUSTRIES } from "@/lib/site";
 import { Schema, webPageNode, serviceNode } from "@/components/Schema";
 import { PerCallCards, SetupLine } from "@/components/PriceCards";
 
@@ -24,27 +24,17 @@ export default function HomePage() {
     <>
       <Schema nodes={[webPageNode("/", `${SITE.name} | HIPAA-Compliant Medical Answering Service`, SITE.description), ...SERVICES.map((s) => serviceNode(s.id, s.name, s.short))]} />
 
-      {/* HERO: photo block on mobile, washed background on desktop (design-reference/v1, 2026-09-28 revision) */}
-      <section className="relative overflow-hidden bg-canvas lg:bg-surface">
-        <Image src="/images/nci-mobile-hero-800.webp" alt="" width={800} height={476} priority sizes="100vw" className="block aspect-[800/476] w-full object-cover lg:hidden" />
-        <div className="absolute inset-0 hidden lg:block" aria-hidden="true">
-          <Image src="/images/nci-answering-service-hero-2000-2.webp" alt="" width={2000} height={850} priority sizes="100vw" className="h-full w-full object-cover object-left" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0)_18%,rgba(255,255,255,0.86)_42%,rgba(255,255,255,0.97)_60%,rgba(255,255,255,1)_100%)]" />
-        </div>
+      {/* Joe's supplied hero composition, with live accessible copy. */}
+      <section className="relative overflow-hidden bg-canvas">
+        <div className="nci-mobile-art lg:hidden" aria-hidden="true"><Image src="/images/source/NCI-Hero.png" alt="" width={1536} height={1024} priority unoptimized /></div>
+        <div className="nci-hero-art hidden lg:block" aria-hidden="true"><Image src="/images/source/NCI-Hero.png" alt="" width={1536} height={1024} priority unoptimized /><div className="nci-hero-wash" /></div>
         <div className="wrap relative grid py-10 lg:min-h-[640px] lg:grid-cols-12 lg:items-center lg:py-16">
-          <div className="lg:col-span-7 lg:col-start-6">
+          <div className="lg:col-span-6">
             <p className="eyebrow">{SITE.name}</p>
-            <h1 className="h-display mt-3 text-slate">Safeguarding your reputation with <span className="text-brand">25 years</span> of compassionate medical answering</h1>
-            <p className="lede mt-5 max-w-xl">Affordable, professional answering services tailored for medical and professional organizations. Every call is answered by a seasoned person, day or night.</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/find-your-coverage" className="btn-brand">Find Your Coverage</Link>
-              <a href={SITE.phone.href} data-cta="phone" className="btn-outline">Call {SITE.phone.display}</a>
-            </div>
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] font-semibold text-slate">
-              {["HIPAA-compliant", "No contracts", "24/7 live support", "Spanish translation"].map((t) => (
-                <li key={t} className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-brand" />{t}</li>
-              ))}
-            </ul>
+            <h1 className="mt-3 font-slab text-[2.5rem] font-semibold leading-[1.12] text-slate sm:text-[3.2rem] lg:text-[3.8rem]">Connecting Your Customers with Care</h1>
+            <p className="lede mt-5 max-w-xl">Professional call center solutions tailored to your business. Compassionate, reliable answering for medical practices and professionals, day or night.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="/services" className="btn-brand">Learn More</Link><Link href="/contact#contact-form" className="btn-outline">Request a Consultation</Link></div>
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] font-semibold text-slate">{["HIPAA-compliant", "No contracts", "24/7 live support", "Spanish translation"].map((label) => <li key={label} className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-brand" />{label}</li>)}</ul>
           </div>
         </div>
       </section>
@@ -109,10 +99,11 @@ export default function HomePage() {
               <li><strong className="text-slate">Medical practices and specialty groups.</strong> An extension of your team that understands call schedules and dispatches through the right channels.</li>
               <li><strong className="text-slate">Business and professional services.</strong> Trades, funeral homes, property management, legal, and more.</li>
             </ul>
+            <ul className="mt-6 grid gap-2 text-[15px] font-semibold text-slate sm:grid-cols-2">{INDUSTRIES.map((industry) => <li key={industry}>{industry}</li>)}</ul>
             <Link href="/who-we-serve" className="btn-outline mt-8">Who we serve</Link>
           </div>
           <figure className="order-1 lg:order-2">
-            <Image src="/images/nci-banner-black-man.webp" alt="An NCI dispatcher wearing a headset smiles while taking a call in the call center" width={810} height={391} sizes="(min-width: 1024px) 560px, 100vw" className="aspect-[16/10] w-full rounded-xl2 object-cover object-left shadow-card" />
+            <Image src="/images/nci-banner-black-man.webp" alt="A call center professional wearing a headset smiles while taking a call in the call center" width={810} height={391} sizes="(min-width: 1024px) 560px, 100vw" className="aspect-[16/10] w-full rounded-xl2 object-cover object-left shadow-card" />
           </figure>
         </div>
       </section>
@@ -144,7 +135,7 @@ export default function HomePage() {
       <section className="bg-canvas">
         <div className="wrap py-16 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-4"><p className="eyebrow">Why NCI Answering Service?</p><h2 className="h-section mt-3">Best quality of service at the lowest possible rate</h2></div>
+            <div className="lg:col-span-4"><p className="eyebrow">Why Next Call In (NCI)?</p><h2 className="h-section mt-3">Best quality of service at the lowest possible rate</h2></div>
             <div className="lg:col-span-8">
               <p className="lede">We are one of the longest-standing medical call centers, with unmatched client and staff retention. Our seasoned dispatchers, averaging 8 to 15 years with NCI, are some of the most experienced, accurate, and efficient in the industry. Combined with our values rooted in empathy and compassion, we help safeguard your reputation, enhance patient satisfaction, and optimize your bottom line.</p>
               <dl className="mt-8 grid gap-6 sm:grid-cols-3">

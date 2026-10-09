@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 import { Schema, webPageNode, breadcrumbNode } from "@/components/Schema";
 
 const TITLE = "Make a Payment";
-const DESC = "Pay your NCI Answering Service invoice by credit card or ACH through our secure payment portal.";
+const DESC = "Pay your Next Call In (NCI) invoice by credit card or ACH through our secure payment portal.";
 
 export const metadata = createMetadata({ title: TITLE, description: DESC, path: "/make-a-payment" });
 

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ported 1:1 from design-reference/v1/styles/tailwind.css. Font faces come from next/font/local (src/lib/fonts.ts). */
+/* Ported 1:1 from design-reference/v2/styles/tailwind.css. Font faces come from next/font/local (src/lib/fonts.ts). */
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -31,7 +31,7 @@
   .rule-list > li { @apply border-b border-brand/40 py-3 text-center font-semibold text-slate; }
   .rule-list > li:first-child { @apply border-t; }
   .check-list > li { @apply relative pl-7; }
-  .check-list > li::before { content: ""; @apply absolute left-0 top-[0.45rem] h-4 w-4 rounded-full bg-brand-tint; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23038855' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+  .check-list > li::before { content: ""; @apply absolute left-0 top-[0.45rem] h-4 w-4 rounded-full bg-brand-tint; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23397F8B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
   .field { @apply block w-full rounded-md border border-border bg-canvas px-3.5 py-3 text-[15px] text-ink placeholder:text-muted-ink/70 focus:border-brand focus:ring-0; }
   .label { @apply mb-1.5 block text-[13px] font-semibold uppercase tracking-wide text-slate; }
   .price-card { @apply card overflow-hidden text-center; }
@@ -49,3 +49,12 @@
   .safe-bottom { padding-bottom: max(0.75rem, env(safe-area-inset-bottom)); }
   .scroll-mt-header { scroll-margin-top: 6.5rem; }
 }
+
+/* Frame Joe's supplied originals; preserve source pixels and aspect ratios. */
+.nci-logo { position: relative; display: block; width: 190px; height: 70px; overflow: hidden; }
+.nci-logo img { position: absolute; width: 331.64px; max-width: none; height: auto; left: -69.09px; top: -68.01px; }
+.nci-hero-art { position: absolute; inset: 0; overflow: hidden; }
+.nci-hero-art img { position: absolute; width: 112.9412%; max-width: none; height: auto; left: -6.4706%; top: -13.5294vw; }
+.nci-hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, #fff 0%, #fff 58%, rgba(255,255,255,.96) 60%, rgba(255,255,255,0) 72%); }
+.nci-mobile-art { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #e6f3f5; }
+.nci-mobile-art img { position: absolute; width: 280%; max-width: none; height: auto; left: -164%; top: -44.8%; }

@@ -5,7 +5,7 @@ type Props = {
   eyebrow: string;
   title: ReactNode;
   lede?: string;
-  image: string;
+  image?: string;
   imageWidth?: number;
   imageHeight?: number;
   tall?: boolean;
@@ -19,11 +19,12 @@ type Props = {
 export function PageHero({ eyebrow, title, lede, image, imageWidth = 810, imageHeight = 391, tall = true }: Props) {
   return (
     <section className="relative overflow-hidden bg-canvas lg:bg-surface">
-      <Image src={image} alt="" width={imageWidth} height={imageHeight} priority sizes="100vw" className="block w-full object-cover lg:hidden" style={{ aspectRatio: `${imageWidth}/${imageHeight}` }} />
+      {image ? <><Image src={image} alt="" width={imageWidth} height={imageHeight} priority sizes="100vw" className="block w-full object-cover lg:hidden" style={{ aspectRatio: `${imageWidth}/${imageHeight}` }} />
       <div className="absolute inset-0 hidden lg:block" aria-hidden="true">
         <Image src={image} alt="" width={imageWidth} height={imageHeight} sizes="100vw" className="h-full w-full object-cover object-left" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0)_14%,rgba(255,255,255,0.86)_40%,rgba(255,255,255,0.97)_58%,rgba(255,255,255,1)_100%)]" />
       </div>
+      </> : null}
       <div className={`wrap relative flex py-8 lg:items-center lg:py-14 ${tall ? "lg:min-h-[380px]" : "lg:min-h-[300px]"}`}>
         <div className="max-w-2xl lg:ml-auto lg:text-right">
           <p className="eyebrow">{eyebrow}</p>

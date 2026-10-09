@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * NCI Answering Service design tokens. Mirrors design-reference/v1/tailwind.config.js
+ * NCI Answering Service design tokens. Mirrors design-reference/v2/tailwind.config.js
  * exactly (same names, same values) so the Next.js port stays visually identical to
  * the frozen HTML reference. Change tokens there first, then here.
  */
@@ -17,9 +17,9 @@ const config: Config = {
         ink: "#1E2622",
         "muted-ink": "#5C6660",
         border: "#E1E7E4",
-        brand: { DEFAULT: "#038855", hover: "#00784A", deep: "#005E3A", tint: "#E7F4EE", subtle: "#F2F9F5", ink: "#0B4A31" },
+        brand: { DEFAULT: "#397F8B", hover: "#306D78", deep: "#254763", tint: "#E5F3F4", subtle: "#F2F8F9", ink: "#254763" },
         "on-brand": "#FFFFFF",
-        slate: { DEFAULT: "#353535", deep: "#262626" },
+        slate: { DEFAULT: "#254763", deep: "#1C354B" },
         alert: { DEFAULT: "#DF0000", hover: "#C40000" },
         focus: "#1D6FE0",
         success: "#1F8A4C",

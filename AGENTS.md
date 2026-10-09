@@ -1,6 +1,7 @@
 # Agent notes — NCI Answering Service site
 
-- **Design baseline:** `design-reference/v1/` (status `verified-reference`, frozen 2026-09-28). Manifest: `design-reference/v1/reference-manifest.json`. Verify with `npm run check:reference`. Parity captures for the Next.js port live in `design-reference/parity/`.
+- **Current revision:** `design-reference/v2/` implements Joe’s October 7 brief. Verify both manifests with `npm run check:reference`; preserve the frozen v1. Real team photography remains pending.
+- **Original design baseline:** `design-reference/v1/` (status `verified-reference`, frozen 2026-09-28). Manifest: `design-reference/v1/reference-manifest.json`. Verify with `npm run check:reference`. Parity captures for the Next.js port live in `design-reference/parity/`.
 - **Facts live in one place:** `src/lib/site.ts`. Phone, address, email, payment portal, prices, nav, FAQ. Never hard-code a phone number or price in a component.
 - **Only `tel:` links carry `data-cta="phone"`.** The call-click ledger and the GTM phone_click trigger both key on that attribute.
 - **Forms:** `/api/lead` is the only delivery path. It returns 503 when `RESEND_API_KEY`/`LEAD_TO_EMAIL` are missing; never make it "succeed" silently. No patient information is ever accepted or stored.

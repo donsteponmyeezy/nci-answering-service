@@ -1,3 +1,4 @@
+import { SITE } from "@/lib/site";
 import { ImageResponse } from "next/og";
 
 export const OG_SIZE = { width: 1200, height: 630 };
@@ -10,11 +11,11 @@ export const OG_SIZE = { width: 1200, height: 630 };
 export function renderOgImage({ eyebrow, headline, subhead }: { eyebrow: string; headline: string; subhead: string }) {
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 64, background: "linear-gradient(135deg, #038855 0%, #00784A 100%)", color: "#fff", fontFamily: "sans-serif" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 64, background: "linear-gradient(135deg, #397F8B 0%, #306D78 100%)", color: "#fff", fontFamily: "sans-serif" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
             <span style={{ fontSize: 72, fontWeight: 800, letterSpacing: -2 }}>NCI</span>
-            <span style={{ fontSize: 18, letterSpacing: 6, opacity: 0.9 }}>ANSWERING SERVICE</span>
+            <span style={{ fontSize: 18, letterSpacing: 6, opacity: 0.9 }}>NEXT CALL IN</span>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
@@ -24,7 +25,7 @@ export function renderOgImage({ eyebrow, headline, subhead }: { eyebrow: string;
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, opacity: 0.9 }}>
           <span>HIPAA-compliant · No contracts · 24/7</span>
-          <span>914-333-9348</span>
+          <span>{SITE.phone.display}</span>
         </div>
       </div>
     ),

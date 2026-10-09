@@ -1,6 +1,6 @@
 # NCI Answering Service — website
 
-Next.js 14 (App Router) + Tailwind 3.4 + TypeScript. Rework of https://nciansweringservice.com/ that keeps NCI's existing design language and adds the sections from the September 2026 proposal.
+Next Call In (NCI). Next.js 14 (App Router) + Tailwind 3.4 + TypeScript. Rework of https://nciansweringservice.com/ that keeps NCI's existing design language and adds the sections from the September 2026 proposal.
 
 ## Run
 
@@ -10,7 +10,7 @@ cp .env.example .env.local   # fill RESEND_API_KEY + LEAD_TO_EMAIL before any fo
 npm run dev                  # http://localhost:3000
 npm run build && npm start   # production
 npm run typecheck && npm run lint
-npm run check:reference      # design-reference/v1 still matches its frozen manifest
+npm run check:reference      # verifies both v1 and v2 manifests
 ```
 
 ## What's here
@@ -42,6 +42,10 @@ npm run check:reference      # design-reference/v1 still matches its frozen mani
 5. Decide on the footer credit in `src/lib/site.ts` (`SITE.credit`, defaults to DePinho Design).
 6. Point DNS at the host, then submit `/sitemap.xml` in Google Search Console.
 
+## October 7 revision
+
+Joe’s supplied logo and hero are implemented with Monica’s history, woman-owned callout, values, industry groups, naming changes and consultation CTA. The v2 reference is in `design-reference/v2/`; v1 remains frozen. Actual office/team photography is still needed. Changes are local until an approved push/deployment.
+
 ## Design rules
 
-The Next.js app must stay visually identical to `design-reference/v1`. Tokens live in both `design-reference/v1/tailwind.config.js` and `tailwind.config.ts`; change the reference first. A material redesign gets a `design-reference/v2/`.
+The Next.js app must follow `design-reference/v2` for this revision. Tokens live in both `design-reference/v1/tailwind.config.js` and `tailwind.config.ts`; change the reference first. A material redesign gets a `design-reference/v2/`.

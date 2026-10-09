@@ -87,7 +87,7 @@ export default function ServicesPage() {
 
       <section id="business" className="scroll-mt-header bg-canvas">
         <div className="wrap grid items-center gap-10 py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
-          <figure><Image src="/images/nci-photo-banner-3.webp" alt="An NCI dispatcher takes a call while a colleague works at the next station" width={810} height={391} sizes="(min-width: 1024px) 560px, 100vw" className="aspect-[16/10] w-full rounded-xl2 object-cover object-left shadow-card" /></figure>
+          <figure><Image src="/images/nci-photo-banner-3.webp" alt="A call center professional takes a call while a colleague works at the next station" width={810} height={391} sizes="(min-width: 1024px) 560px, 100vw" className="aspect-[16/10] w-full rounded-xl2 object-cover object-left shadow-card" /></figure>
           <div>
             <p className="eyebrow">03 · Beyond medical</p>
             <h2 className="h-section mt-3">Business &amp; Professional Services</h2>
